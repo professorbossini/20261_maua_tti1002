@@ -3,11 +3,38 @@ package br.maua;
 public class Personagem {
     //variáveis
     String nome;
-    int energia = 10;
-    int fome = 0;
-    int sono = 0;
-    //métodos
-    //tipo de retorno, nome, lista de parâmetros e corpo
+    private int energia;
+    private int fome;
+    private int sono;
+
+    //construtor padrão
+    Personagem(){
+        energia = 10;
+        fome = 0;
+        sono = 0;
+    }
+    
+    Personagem(int energia, int fome, int sono){
+        setEnergia(energia);
+        setFome(fome);
+        setSono(sono);            
+    }
+
+    void setEnergia(int energia){
+        if(energia >= 0 && energia <= 10)
+            this.energia = energia;
+    }
+
+    void setSono(int sono){
+        if(sono >= 0 && sono <= 10)
+            this.sono = sono;    
+    }
+
+    void setFome(int fome){
+        if(fome >= 0 && fome <= 10)
+            this.fome = fome;
+    }
+
     void cacar(){
         // if energia >= 2:
         if(energia >= 2){
@@ -42,7 +69,7 @@ public class Personagem {
             sono = Math.max(sono - 1, 0);
         }
         else{
-            System.out.printf("%s sem sono", nome);
+            System.out.printf("%s sem sono\n", nome);
         }
     }
 
