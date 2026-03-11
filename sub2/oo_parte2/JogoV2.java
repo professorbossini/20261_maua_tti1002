@@ -1,19 +1,11 @@
 import java.util.Random;
 public class JogoV2 {
     public static void main(String[] args) throws Exception{
-        //adicionar um segundo personagem
-        //dar um nome para ele
-        //sortear separadamente o que ele tem que fazer
-        //exibir o seu estado ao final tbm
-        //desafio extra: fazer o personagem guloso, ou seja, ele tem maior probabilidade de comer
-        //60% de probabilidade de comer, 30% de caçar e 10% de dormir
         Random gerador = new Random();
         Personagem cacador = new Personagem();
         cacador.nome = "John";
-        //1: caçar
-        //2: comer
-        //3: dormir
-        if( 4 <= oqueFazer && oqueFazer <= 5)
+        Personagem guloso = new Personagem(5, 8, 0);
+        guloso.nome = "Guloso";
         while(true){
             int oQueFazer = gerador.nextInt(1, 4);
             switch(oQueFazer){
@@ -27,12 +19,23 @@ public class JogoV2 {
                     cacador.dormir();
                     break;
             }
+            oQueFazer = gerador.nextInt(1, 11);
+            switch(oQueFazer){
+                case 1, 2, 3, 4, 5, 6:
+                    guloso.comer();
+                    break;
+                case 7, 8:
+                    guloso.cacar();
+                    break;
+                default:
+                    guloso.dormir();
+                    break;
+            }
             cacador.exibirEstado();
+            guloso.exibirEstado();
             System.out.println("====================================");
             Thread.sleep(5000);
         }
     }    
 }
 
-
-if (a > 1 && a < 2)

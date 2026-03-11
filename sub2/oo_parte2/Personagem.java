@@ -1,8 +1,34 @@
 public class Personagem{
     String nome;
-    int energia = 10;
-    int fome = 0;
-    int sono = 0;
+    private int energia = 10;
+    private int fome = 0;
+    private int sono = 0;
+    //sobrecarga de construtores
+    Personagem(){
+
+    }
+
+    Personagem(int energia, int fome, int sono){
+        setEnergia(energia);
+        setFome(fome);
+        setSono(sono);
+    }
+
+    public void setSono(int sono) {
+        if(sono >= 0 && sono <= 10)
+            this.sono = sono;
+    }
+
+    void setEnergia(int energia){
+        if(energia >= 0 && energia <= 10)
+            this.energia = energia;    
+    }
+
+    //setter
+    void setFome(int f){
+        if(f >= 0 && f <= 10)
+            fome = f;
+    }
 
     //métodos
     //tipo de retorno, nome, lista de parâmetros, corpo
