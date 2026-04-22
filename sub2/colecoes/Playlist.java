@@ -35,6 +35,7 @@ public class Playlist {
               JOptionPane.showMessageDialog(null, "Música avaliada");
             }
           }
+          break;
       }
     }while(op != 0);
   }
