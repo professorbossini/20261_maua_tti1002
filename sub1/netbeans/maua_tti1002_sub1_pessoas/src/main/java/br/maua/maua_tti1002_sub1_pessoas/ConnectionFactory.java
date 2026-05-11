@@ -4,11 +4,11 @@ package br.maua.maua_tti1002_sub1_pessoas;
 import java.sql.Connection;
 import java.sql.DriverManager;
 public class ConnectionFactory {
-    private static String usuario = "root";
-    private static String senha = "123456";
-    private static String host = "localhost";
-    private static String port = "3306";
-    private static String db = "20261_maua_tti1002_sub1_pessoas";
+    private static String usuario = "avnadmin";
+    private static String senha = "AVNS_Yx8-gCKGPhV2tX6tL2z";
+    private static String host = "mysql-7effebb-professorbossini.i.aivencloud.com";
+    private static String port = "12956";
+    private static String db = "defaultdb";
     
     public static Connection obterConexao(){
         try{
