@@ -29,13 +29,33 @@ public class Menu {
                     List <Pessoa> pessoas = Pessoa.listar();
                     //for each e mostrar os dados de cada pessoa
                     for(Pessoa p : pessoas){
-                        System.out.printf(
-                            "%d, %s, %s, %s\n",
-                            p.getCodigo(), p.getNome(), p.getFone(), p.getEmail()
-                        );
+                        System.out.println(p);
                     }
                     break;
                 }
+                case 3:{
+                    System.out.println("Digite nome");
+                    String nome = leitor.next();
+                    System.out.println("Digite fone");
+                    String fone = leitor.next();
+                    System.out.println("Digite e-mail");
+                    String email = leitor.next();
+                    System.out.println("Digite código");
+                    int codigo = leitor.nextInt();
+                    Pessoa p = new Pessoa(codigo, nome, fone, email);
+                    p.atualizar();
+                    System.out.println("Atualização OK!");
+                    break;
+                }
+                case 4:{
+                    System.out.println("Digite o código");
+                    int codigo = leitor.nextInt();
+                    Pessoa p = new Pessoa(codigo);
+                    p.remover();
+                    System.out.println("Remoção OK!");
+                }
+                //fazer o case 5
+                //exibir todas as pessoas (ordenação por nome)
             }
         }while(opcao != 0);
         

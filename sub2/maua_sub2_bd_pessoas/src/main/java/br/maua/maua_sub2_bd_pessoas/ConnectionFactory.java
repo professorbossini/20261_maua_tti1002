@@ -3,11 +3,11 @@ package br.maua.maua_sub2_bd_pessoas;
 import java.sql.Connection;
 import java.sql.DriverManager;
 public class ConnectionFactory {
-    private static String usuario = "avnadmin";
-    private static String senha = "AVNS_s6tz4RCAM1SEVZ3gZ4K";
-    private static String host = "mysql-25ee1db3-professorbossini.h.aivencloud.com";
-    private static String porta = "12956";
-    private static String db = "defaultdb";
+    private static String usuario = "root";
+    private static String senha = "123456";
+    private static String host = "localhost";
+    private static String porta = "3306";
+    private static String db = "20261_maua_tti1002_sub2_pessoas";
     
     public static Connection obterConexao(){
         try{
